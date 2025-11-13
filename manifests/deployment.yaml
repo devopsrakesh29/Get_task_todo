@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gettask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gettask
+  template:
+    metadata:
+      labels:
+        app: gettask
+    spec:
+      containers:
+      - name: gettask
+        image: rakeshacr.azureacr.io/gettask:v1
+        ports:
+        - containerPort: 80
+        env: 
+          - name: CONNECTION_STRING
+            value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:rakeshdbs01.database.windows.net,1433;Database=rakeshsqldb01;Uid=azureuser;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
