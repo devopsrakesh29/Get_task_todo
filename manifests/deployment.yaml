@@ -20,3 +20,7 @@ spec:
         env: 
           - name: CONNECTION_STRING
             value: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:rakeshdbs01.database.windows.net,1433;Database=rakeshsqldb01;Uid=azureuser;Pwd={your_password_here};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+
+
+
+            
